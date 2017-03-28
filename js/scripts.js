@@ -1,10 +1,20 @@
-var text = ("Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.");
+var text = "Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.";
 
-var animal = "Zielone słonie";
-var animalUpperCased = animal.toUpperCase();
+function changeFirstWord(newAnimal) {
+	var anArray = text.split(" ");
+	anArray.shift();
+	anArray.unshift(newAnimal);
+	var newText = anArray.join(" ");
+	console.log(newText.charAt(0).toUpperCase()); //+ newText.slice(1);
+	console.log(newText);
+};
+changeFirstWord("ropuchy");
 
-var textNew = text.replace ("Papugi", animalUpperCased);
+// var animal = "Zielone słonie";
+//var animalUpperCased = animal.toUpperCase();
 
-var textNewHalf = textNew.length / 2;
+//var textNew = text.replace ("Papugi", animalUpperCased);
 
-console.log(textNew.slice(0, textNewHalf));
+//var textNewHalf = textNew.length / 2;
+
+//console.log(textNew.slice(0, textNewHalf)); */
